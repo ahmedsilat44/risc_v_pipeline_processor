@@ -8,9 +8,7 @@ output reg [4:0] MEMWB_rd,
 output reg [63:0] MEMWB_readData, MEMWB_aluResult
 );
 
-
-
-  always @(posedge clk) begin
+always @(posedge clk) begin
 
     case(reset)
           1'b1: //reset on

@@ -11,8 +11,6 @@ output reg [4:0] EXMEM_rd,
 output reg [63:0] EXMEM_addrOut, EXMEM_aluResult, EXMEM_readData2
 ); 
 
- 
-
 always @(posedge clk) begin
         case (reset)
         1'b1: // reset 

@@ -23,8 +23,7 @@ initial begin
     for (k = 0 ; k < 1023 ; k = k + 1) begin
         memory[k] = 0;
     end
-    
-
+  
     memory[256] = 8'd7;
     memory[260] = 8'd6;
     memory[264] = 8'd5;

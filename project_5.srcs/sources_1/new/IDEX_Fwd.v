@@ -20,7 +20,6 @@ module IDEX_Fwd(
     output reg Branch_store, MemWrite_store, MemRead_store,
     output reg ALUSrc_store,
     output reg [1:0] ALU_op_store
-
 );
 
 always @(posedge clk) begin
@@ -42,7 +41,6 @@ always @(posedge clk) begin
     ALU_op_store = 0;
     end 
     else begin
-    
     PC_addr_store = PC_addr;
     read_data1_store = read_data1;
     read_data2_store = read_data2;

@@ -14,10 +14,6 @@ output reg [3:0] IDEX_Funct,
 output reg [4:0] IDEX_rs1, IDEX_rs2, IDEX_rd
 ); 
 
-
-
-
-
 always @(posedge clk) begin
     case (reset)
         1'b1: // reset 

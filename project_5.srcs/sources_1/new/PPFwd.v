@@ -3,30 +3,31 @@
 
 
 module PPFwd(
-    input clk, reset,
+    input clk,reset,
     output[63:0] pcOut,
     output [31:0] Instruction,
-    output [63:0] num1,num2,num3,num4,num5,num6,num7,
-    output wire switch_branch
+    output [63:0] num1,num2,num3,num4,num5,num6,num7
     );
-    
-    wire [1:0] forwardA, forwardB;
-    wire [6:0] opcode; 
-    wire[4:0] rd;
-    wire [2:0] funct3;
-    wire [6:0] funct7;
-    wire [4:0] rs1, rs2;
-    wire Branch, MemRead, MemtoReg, MemWrite, ALUSrc, RegWrite;
-    wire greater;
-    wire [1:0] ALUOp;
-    wire [63:0] writeData;
-    wire [63:0] pcIn;
-    wire [3:0] ALU_C_Operation;
-    wire [63:0] ReadData1, ReadData2;
-    wire [63:0] immData;
-    
+
+wire [1:0] forwardA, forwardB;
+wire [6:0] CONTROL_IN; 
+wire[4:0] rd;
+wire [2:0] funct3;
+wire [6:0] funct7;
+wire [4:0] rs1, rs2;
+wire Branch, MemRead, MemtoReg, MemWrite, ALUSrc, RegWrite;
+wire Is_Greater;
+wire [1:0] ALUOp;
+wire [63:0] mux_to_reg;
+wire [63:0] mux_to_pc_in;
+wire [3:0] ALU_C_Operation;
+wire [63:0] ReadData1, ReadData2;
+wire [63:0] imm_data;
+
+
+
 wire [63:0] fixed_4 = 64'd4;
-    wire [63:0] out1;
+wire [63:0] PC_plus_4_to_mux;
 
 wire [63:0] alu_mux;
 
@@ -38,31 +39,32 @@ wire [63:0] imm_adder_to_mux;
 
 wire [63:0] DM_Read_Data;
 
-
+wire pc_mux_sel_wire;
 wire PCWrite;
 
 //IF_ID WIRES
-wire [63:0] IFID_pcAddr;
-wire [31:0] IFID_Instruction;
-wire IFID_Write;
+wire [63:0] IF_ID_PC_addr;
+wire [31:0] IF_ID_IM_to_parse;
+wire IF_ID_Write;
 
 //ID_EX WIRES
 
-wire IDEX_Branch, IDEX_MemRead, IDEX_MemtoReg;
-wire IDEX_MemWrite, IDEX_ALUSrc, IDEX_RegWrite;
+wire ID_EX_Branch, ID_EX_MemRead, ID_EX_MemtoReg;
+wire ID_EX_MemWrite, ID_EX_ALUSrc, ID_EX_RegWrite;
 
-wire [63:0] IDEX_pcAddr, IDEX_ReadData1, IDEX_ReadData2, IDEX_immData;
-wire [3:0] IDEX_funct_in;
-wire [4:0] IDEX_rd, IDEX_rs1, IDEX_rs2;
-wire [1:0] IDEX_ALUOp;
+wire [63:0] ID_EX_PC_addr, ID_EX_ReadData1, ID_EX_ReadData2,
+            ID_EX_imm_data;
+wire [3:0] ID_EX_funct_in;
+wire [4:0] ID_EX_rd, ID_EX_rs1, ID_EX_rs2;
+wire [1:0] ID_EX_ALUOp;
 
-assign immLeftShift = IDEX_immData<< 1;
+assign imm_to_adder = ID_EX_imm_data<< 1;
 
 
 //EX_MEM WIRES
-wire EXMEM_Branch, EXMEM_MemRead, EXMEM_MemtoReg;
-wire EXMEM_MemWrite, EXMEM_RegWrite; 
-wire EXMEM_zero, EXMEM_greater;
+wire EX_MEM_Branch, EX_MEM_MemRead, EX_MEM_MemtoReg;
+wire EX_MEM_MemWrite, EX_MEM_RegWrite; 
+wire EX_MEM_zero, EX_MEM_Is_Greater;
 wire [63:0] EX_MEM_PC_plus_imm, EX_MEM_alu_result, EX_MEM_ReadData2;
 wire [3:0] EX_MEM_funct_in;
 wire [4:0] EX_MEM_rd;
@@ -74,122 +76,128 @@ wire [63:0] MEM_WB_DM_Read_Data, MEM_WB_alu_result;
 wire [4:0] MEM_WB_rd;
 
 
-mux_21 pcsrcmux(EX_MEM_PC_plus_imm, out1, switch_branch, pcIn);
+mux_21 pcsrcmux(EX_MEM_PC_plus_imm, PC_plus_4_to_mux, pc_mux_sel_wire, mux_to_pc_in);
 
-pcFwd PC (clk, reset,PCWrite, pcIn,pcOut);
+pcFwd PC (clk, reset,PCWrite, mux_to_pc_in,pcOut);
 
-addr pcadder(pcOut, fixed_4, out1);
+addr pcadder(pcOut, fixed_4, PC_plus_4_to_mux);
 
 instrMem insmem(pcOut, Instruction);
 
 
 //IF_ID STAGE
-IFID_Fwd IFIDreg(clk, NOP_Check, IFID_Write, pcOut,Instruction, IFID_pcAddr, IFID_Instruction);
+IFID_Fwd IFIDreg(.clk(clk), .Flush(NOP_Check), .IFID_Write(IF_ID_Write), .PC_addr(pcOut),
+                .Instruc(Instruction), .PC_store(IF_ID_PC_addr), .
+                Instr_store(IF_ID_IM_to_parse));
 
-wire controlMuxSel;
+wire control_mux_sel;
 
-hazardDetection hazarddetectionunit(IDEX_rd, rs1, rs2, IDEX_MemRead, controlMuxSel,
-                                       IFID_Write, PCWrite);
+hazardDetection hazarddetectionunit(ID_EX_rd, rs1, rs2, ID_EX_MemRead, control_mux_sel,
+                                       IF_ID_Write, PCWrite);
     
 
 
-instrParse ip(IFID_Instruction, opcode, rd, funct3, rs1, rs2, funct7);
+instrParse insparser(IF_ID_IM_to_parse, CONTROL_IN, rd, funct3, rs1, rs2, funct7);
 
 wire [3:0] funct_in;
 //makes a ALU OP
-assign funct_in = {IFID_Instruction[30],IFID_Instruction[14:12]};
+assign funct_in = {IF_ID_IM_to_parse[30],IF_ID_IM_to_parse[14:12]};
 
-controlUnit cu(opcode, ALUOp, Branch, MemRead, MemtoReg, MemWrite, ALUSrc, RegWrite);
+controlUnit cunit(CONTROL_IN, ALUOp, Branch, MemRead, MemtoReg, MemWrite, ALUSrc, RegWrite);
  
 
-regFile regFile(writeData, rs1, rs2, MEM_WB_rd, MEM_WB_RegWrite, clk, reset, 
+regFile registerfiles(mux_to_reg, rs1, rs2, MEM_WB_rd, MEM_WB_RegWrite, clk, reset, 
                             ReadData1, ReadData2);
 
 
-immGen ig(IFID_Instruction, immData);
+immGen immgen(IF_ID_IM_to_parse, imm_data);
 
-wire IDEX_MemtoReg, IDEX_RegWrite, IDEX_Branch, IDEX_MemWrite, IDEX_MemRead, IDEX_ALUSrc;
-wire [1:0] IDEX_ALUop;
+wire MemtoReg_ID_EXin, RegWrite_ID_EXin, Branch_ID_EXin, MemWrite_ID_EXin, MemRead_ID_EXin, ALUSrc_ID_EXin;
 
 //if a hazard is detected then stop taking in instructions 
-assign ID_MemtoReg = controlMuxSel ? MemtoReg : 0;
-assign ID_RegWrite = controlMuxSel ? RegWrite : 0;
-assign ID_Branch = controlMuxSel ? Branch : 0;
-assign ID_MemWrite = controlMuxSel ? MemWrite : 0;
-assign ID_MemRead = controlMuxSel ? MemRead : 0;
-assign ID_ALUSrc = controlMuxSel ? ALUSrc : 0;
-assign ID_ALUop = controlMuxSel ? ALUOp : 2'b00;
+assign MemtoReg_ID_EXin = control_mux_sel ? MemtoReg : 0;
+assign RegWrite_ID_EXin = control_mux_sel ? RegWrite : 0;
+assign Branch_ID_EXin = control_mux_sel ? Branch : 0;
+assign MemWrite_ID_EXin = control_mux_sel ? MemWrite : 0;
+assign MemRead_ID_EXin = control_mux_sel ? MemRead : 0;
+assign ALUSrc_ID_EXin = control_mux_sel ? ALUSrc : 0;
+wire [1:0] ALUop_ID_EXin;
+assign ALUop_ID_EXin = control_mux_sel ? ALUOp : 2'b00;
 
 
 // ID/EX STAGE
-IDEX_Fwd IDEXreg(clk, NOP_Check, IFID_pcAddr, ReadData1, 
-            ReadData2, immData, funct_in, rd, rs1, rs2, ID_MemtoReg, ID_RegWrite, 
-            ID_Branch, ID_MemWrite, ID_MemRead, ID_ALUSrc, ID_ALUop,
-            IDEX_pcAddr, IDEX_ReadData1, IDEX_ReadData2, IDEX_immData, IDEX_funct_in, 
-            IDEX_rd, IDEX_rs1, IDEX_rs2, IDEX_MemtoReg,
-            IDEX_RegWrite, IDEX_Branch, IDEX_MemWrite, 
-            IDEX_MemRead, IDEX_ALUSrc, IDEX_ALUOp);
+IDEX_Fwd ID_EX1(.clk(clk), .Flush(NOP_Check), .PC_addr(IF_ID_PC_addr), .read_data1(ReadData1), 
+            .read_data2(ReadData2), .imm_val(imm_data), .funct_in(funct_in), .rd_in(rd), 
+            .rs1_in(rs1), .rs2_in(rs2), .RegWrite(RegWrite_ID_EXin), 
+            .MemtoReg(MemtoReg_ID_EXin), .Branch(Branch_ID_EXin), 
+            .MemWrite(MemWrite_ID_EXin), .MemRead(MemRead_ID_EXin), .ALUSrc(ALUSrc_ID_EXin), 
+            .ALU_op(ALUop_ID_EXin), .PC_addr_store(ID_EX_PC_addr), 
+            .read_data1_store(ID_EX_ReadData1), .read_data2_store(ID_EX_ReadData2), 
+            .imm_val_store(ID_EX_imm_data), .funct_in_store(ID_EX_funct_in), 
+            .rd_in_store(ID_EX_rd), .rs1_in_store(ID_EX_rs1), .rs2_in_store(ID_EX_rs2), 
+            .RegWrite_store(ID_EX_RegWrite), .MemtoReg_store(ID_EX_MemtoReg), 
+            .Branch_store(ID_EX_Branch), .MemWrite_store(ID_EX_MemWrite), 
+            .MemRead_store(ID_EX_MemRead), .ALUSrc_store(ID_EX_ALUSrc), 
+            .ALU_op_store(ID_EX_ALUOp));
 
-aluControl alucontrol(IDEX_ALUOp, IDEX_funct_in, ALU_C_Operation);
+aluControl ALU_Control1(ID_EX_ALUOp, ID_EX_funct_in, ALU_C_Operation);
 
 wire [63:0] triplemux_to_a, triplemux_to_b;
 
-mux_21 ALU_mux(IDEX_immData, triplemux_to_b, IDEX_ALUSrc, alu_mux);
+mux_21 ALU_mux(ID_EX_imm_data, triplemux_to_b, ID_EX_ALUSrc, alu_mux);
 
 
 
-mux_31 mux_for_a(IDEX_ReadData1, writeData, EX_MEM_alu_result, forwardA, triplemux_to_a);
+mux_31 mux_for_a(ID_EX_ReadData1, mux_to_reg, EX_MEM_alu_result, forwardA, triplemux_to_a);
 
-mux_31 mux_for_b(IDEX_ReadData2, writeData, EX_MEM_alu_result, forwardB, triplemux_to_b);
+mux_31 mux_for_b(ID_EX_ReadData2, mux_to_reg, EX_MEM_alu_result, forwardB, triplemux_to_b);
 
-alu64 alu(triplemux_to_a, alu_mux, ALU_C_Operation, alu_result, zero, greater);
-
-
-
-fwdUnit fu(EX_MEM_rd, MEM_WB_rd, IDEX_rs1, IDEX_rs2, EXMEM_RegWrite, 
-                        EXMEM_MemtoReg, MEM_WB_RegWrite, forwardA, forwardB);
+alu64 ALU_64(triplemux_to_a, alu_mux, ALU_C_Operation, alu_result, zero, Is_Greater);
 
 
-wire [63:0] out2;
 
-addr branchAddr(IDEX_pcAddr, immLeftShift, out2);
+fwdUnit Fwd_unit(EX_MEM_rd, MEM_WB_rd, ID_EX_rs1, ID_EX_rs2, EX_MEM_RegWrite, 
+                        EX_MEM_MemtoReg, MEM_WB_RegWrite, forwardA, forwardB);
+
+
+wire [63:0] pc_add_imm_to_EX_MEM;
+
+addr PC_plus_imm(ID_EX_PC_addr, imm_to_adder, pc_add_imm_to_EX_MEM);
 
 // EX/MEM STAGE
 
-EXMEM_Fwd EXMEMreg(clk,NOP_Check ,IDEX_RegWrite,IDEX_MemtoReg,
-                IDEX_Branch,zero,
-                IDEX_MemWrite,IDEX_MemRead,greater,out2,
-                alu_result,triplemux_to_b,IDEX_funct_in,
-                IDEX_rd,
-                EXMEM_RegWrite,EXMEM_MemtoReg,
-                EXMEM_Branch,EXMEM_zero,
-                EXMEM_MemWrite,
-                EXMEM_MemRead,EXMEM_greater,
-                EX_MEM_PC_plus_imm,
-                EX_MEM_alu_result,EX_MEM_ReadData2,
-                EX_MEM_funct_in,EX_MEM_rd);
+EXMEM_Fwd EX_MEM1(.clk(clk),.Flush(NOP_Check),.RegWrite(ID_EX_RegWrite),.MemtoReg(ID_EX_MemtoReg),
+                .Branch(ID_EX_Branch),.Zero(zero),.Is_Greater(Is_Greater),
+                .MemWrite(ID_EX_MemWrite),.MemRead(ID_EX_MemRead),.PCplusimm(pc_add_imm_to_EX_MEM),
+                .ALU_result(alu_result),.WriteData(triplemux_to_b),.funct_in(ID_EX_funct_in),
+                .rd(ID_EX_rd),.RegWrite_store(EX_MEM_RegWrite),.MemtoReg_store(EX_MEM_MemtoReg),
+                .Branch_store(EX_MEM_Branch),.Zero_store(EX_MEM_zero),
+                .Is_Greater_store(EX_MEM_Is_Greater),.MemWrite_store(EX_MEM_MemWrite),
+                .MemRead_store(EX_MEM_MemRead),.PCplusimm_store(EX_MEM_PC_plus_imm),
+                .ALU_result_store(EX_MEM_alu_result),.WriteData_store(EX_MEM_ReadData2),
+                .funct_in_store(EX_MEM_funct_in),.rd_store(EX_MEM_rd));
 
 
 
-branchControl branchcontrol(EXMEM_Branch, EXMEM_zero, EXMEM_greater,
-                                EX_MEM_funct_in,switch_branch,NOP_Check);
+branchControl Branch_Control(.Branch(EX_MEM_Branch), .Flush(NOP_Check), .Zero(EX_MEM_zero), .Is_Greater(EX_MEM_Is_Greater),
+                                .funct(EX_MEM_funct_in),.switch_branch(pc_mux_sel_wire));
 
 
-dataMem dm(EX_MEM_alu_result, EX_MEM_ReadData2, clk,EXMEM_MemWrite,EXMEM_MemRead,
+dataMem dm(EX_MEM_alu_result, EX_MEM_ReadData2, clk,EX_MEM_MemWrite,EX_MEM_MemRead,
 	DM_Read_Data, num1,num2,num3,num4,num5,num6,num7);
 
 
 
 // MEM/WB STAGE
 
-MEMWB_Fwd MEMWBreg(clk, EXMEM_RegWrite, EXMEM_MemtoReg, 
-                DM_Read_Data, EX_MEM_alu_result, EX_MEM_rd,
-                MEM_WB_RegWrite, MEM_WB_MemtoReg, 
-                MEM_WB_DM_Read_Data,MEM_WB_alu_result, 
-                MEM_WB_rd);
+MEMWB_Fwd MEM_WB1(.clk(clk), .RegWrite(EX_MEM_RegWrite), .MemtoReg(EX_MEM_MemtoReg), 
+                .ReadData(DM_Read_Data), .ALU_result(EX_MEM_alu_result), .rd(EX_MEM_rd),
+                .RegWrite_store(MEM_WB_RegWrite), .MemtoReg_store(MEM_WB_MemtoReg), 
+                .ReadData_store(MEM_WB_DM_Read_Data), .ALU_result_store(MEM_WB_alu_result), 
+                .rd_store(MEM_WB_rd));
 
 
-mux_21 wb(MEM_WB_DM_Read_Data, MEM_WB_alu_result, MEM_WB_MemtoReg, writeData);
-    
-    
+mux_21 mux2(MEM_WB_DM_Read_Data, MEM_WB_alu_result, MEM_WB_MemtoReg, mux_to_reg);
+
+
 endmodule
