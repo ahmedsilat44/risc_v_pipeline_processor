@@ -1,0 +1,7 @@
+Running: xsim.dir/tbPPFwd_behav/xsimk.exe -simmode gui -wdb tbPPFwd_behav.wdb -simrunnum 0 -socket 61465
+Design successfully loaded
+Design Loading Memory Usage: 6200 KB (Peak: 6200 KB)
+Design Loading CPU Usage: 61 ms
+Simulation completed
+Simulation Memory Usage: 6988 KB (Peak: 6988 KB)
+Simulation CPU Usage: 77 ms

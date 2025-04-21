@@ -1,0 +1,1819 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Apr 21 14:06:05 2025
+# Process ID: 16996
+# Current directory: C:/Users/ahmed/Documents/project_5
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1224 C:\Users\ahmed\Documents\project_5\project_5.xpr
+# Log file: C:/Users/ahmed/Documents/project_5/vivado.log
+# Journal file: C:/Users/ahmed/Documents/project_5\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ahmed/Documents/project_5/project_5.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:07 . Memory (MB): peak = 1027.387 ; gain = 0.000
+update_compile_order -fileset sources_1
+close [ open C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immMemPPNF.v w ]
+add_files C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immMemPPNF.v
+update_compile_order -fileset sources_1
+update_files -from_files C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v -to_files C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immMemPPNF.v -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file 'C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immMemPPNF.v' with file 'C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v'.
+close [ open C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg3.v w ]
+add_files C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg3.v
+close [ open C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v w ]
+add_files C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v
+close [ open C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v w ]
+add_files C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v
+close [ open C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg4.v w ]
+add_files C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg4.v
+update_compile_order -fileset sources_1
+close [ open C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/regFilePPNF.v w ]
+add_files C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/regFilePPNF.v
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v w ]
+add_files -fileset sim_1 C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v
+update_compile_order -fileset sim_1
+set_property top tbPPNF [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property top PPNF [current_fileset]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbPPNF
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xelab -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <RISC_V_Pipelined> not found while processing module instance <RP> [C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v:21]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PPNF
+INFO: [VRFC 10-2458] undeclared symbol IDEX_memtoReg, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:56]
+INFO: [VRFC 10-2458] undeclared symbol shifted_data, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:61]
+INFO: [VRFC 10-2458] undeclared symbol addrOut, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+INFO: [VRFC 10-2458] undeclared symbol ID_EX_readData2, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:63]
+INFO: [VRFC 10-2458] undeclared symbol Result, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:66]
+INFO: [VRFC 10-2458] undeclared symbol EXMEM_memtoReg, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:72]
+INFO: [VRFC 10-2458] undeclared symbol dm1, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+INFO: [VRFC 10-2458] undeclared symbol dm2, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+INFO: [VRFC 10-2458] undeclared symbol dm3, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+INFO: [VRFC 10-2458] undeclared symbol dm4, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+INFO: [VRFC 10-2458] undeclared symbol dm5, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+INFO: [VRFC 10-2458] undeclared symbol MEM_WB_ReadData, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:88]
+INFO: [VRFC 10-2458] undeclared symbol MEM_WB_ALU_Result, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:88]
+INFO: [VRFC 10-2458] undeclared symbol MEM_WB_MemtoReg, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:88]
+INFO: [VRFC 10-2458] undeclared symbol WriteData, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:88]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/addr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/alu64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/aluControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aluControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/branchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/controlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/dataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrMemPPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrParse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrParse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/mux_21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEMWB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/programCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module programCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/regFilePPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFilePPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbPPNF
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xelab -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 5 for port 'rs1' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v:21]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'immData' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v:22]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'MEMWB_aluResult' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v:23]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'Result' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:66]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'Adder_out' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:70]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'n0' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+ERROR: [VRFC 10-2922] 'PPNF' expects 32 arguments [C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v:21]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'b' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'b' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:63]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'a' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:88]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PPNF
+INFO: [VRFC 10-2458] undeclared symbol IDEX_memtoReg, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:56]
+INFO: [VRFC 10-2458] undeclared symbol shifted_data, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:61]
+INFO: [VRFC 10-2458] undeclared symbol addrOut, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+INFO: [VRFC 10-2458] undeclared symbol ID_EX_readData2, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:63]
+INFO: [VRFC 10-2458] undeclared symbol Result, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:66]
+INFO: [VRFC 10-2458] undeclared symbol EXMEM_memtoReg, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:72]
+INFO: [VRFC 10-2458] undeclared symbol dm1, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+INFO: [VRFC 10-2458] undeclared symbol dm2, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+INFO: [VRFC 10-2458] undeclared symbol dm3, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+INFO: [VRFC 10-2458] undeclared symbol dm4, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+INFO: [VRFC 10-2458] undeclared symbol dm5, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+INFO: [VRFC 10-2458] undeclared symbol MEM_WB_ReadData, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:88]
+INFO: [VRFC 10-2458] undeclared symbol MEM_WB_ALU_Result, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:88]
+INFO: [VRFC 10-2458] undeclared symbol MEM_WB_MemtoReg, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:88]
+INFO: [VRFC 10-2458] undeclared symbol WriteData, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:88]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/addr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/alu64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/aluControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aluControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/branchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/controlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/dataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrMemPPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrParse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrParse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/mux_21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEMWB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/programCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module programCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/regFilePPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFilePPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbPPNF
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xelab -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'Result' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:66]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'Adder_out' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:70]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'n0' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'b' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'b' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:63]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'a' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:88]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.programCounter
+Compiling module xil_defaultlib.mux_21
+Compiling module xil_defaultlib.addr
+Compiling module xil_defaultlib.instrMemPPNF
+Compiling module xil_defaultlib.IFID
+Compiling module xil_defaultlib.instrParse
+Compiling module xil_defaultlib.immGen
+Compiling module xil_defaultlib.controlUnit
+Compiling module xil_defaultlib.regFilePPNF
+Compiling module xil_defaultlib.branchUnit
+Compiling module xil_defaultlib.IDEX
+Compiling module xil_defaultlib.aluControl
+Compiling module xil_defaultlib.alu64
+Compiling module xil_defaultlib.EXMEM
+Compiling module xil_defaultlib.dataMem
+Compiling module xil_defaultlib.MEMWB
+Compiling module xil_defaultlib.PPNF
+Compiling module xil_defaultlib.tbPPNF
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tbPPNF_behav
+
+****** Webtalk v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim/xsim.dir/tbPPNF_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Apr 21 14:48:41 2025...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tbPPNF_behav -key {Behavioral:sim_1:Functional:tbPPNF} -tclbatch {tbPPNF.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tbPPNF.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tbPPNF_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1027.387 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xelab -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'Result' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:66]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'Adder_out' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:70]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'n0' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'b' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'b' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:63]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'a' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:88]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1027.387 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PPNF
+INFO: [VRFC 10-2458] undeclared symbol IDEX_memtoReg, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:56]
+INFO: [VRFC 10-2458] undeclared symbol shifted_data, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:61]
+INFO: [VRFC 10-2458] undeclared symbol addrOut, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+INFO: [VRFC 10-2458] undeclared symbol ID_EX_readData2, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:63]
+INFO: [VRFC 10-2458] undeclared symbol EXMEM_memtoReg, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:72]
+INFO: [VRFC 10-2458] undeclared symbol dm1, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+INFO: [VRFC 10-2458] undeclared symbol dm2, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+INFO: [VRFC 10-2458] undeclared symbol dm3, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+INFO: [VRFC 10-2458] undeclared symbol dm4, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+INFO: [VRFC 10-2458] undeclared symbol dm5, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+INFO: [VRFC 10-2458] undeclared symbol MEM_WB_ReadData, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:88]
+INFO: [VRFC 10-2458] undeclared symbol MEM_WB_ALU_Result, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:88]
+INFO: [VRFC 10-2458] undeclared symbol MEM_WB_MemtoReg, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:88]
+INFO: [VRFC 10-2458] undeclared symbol WriteData, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:88]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/addr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/alu64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/aluControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aluControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/branchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/controlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/dataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrMemPPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrParse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrParse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/mux_21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEMWB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/programCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module programCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/regFilePPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFilePPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbPPNF
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xelab -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'Adder_out' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:70]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'n0' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'b' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'b' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:63]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'a' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:88]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.programCounter
+Compiling module xil_defaultlib.mux_21
+Compiling module xil_defaultlib.addr
+Compiling module xil_defaultlib.instrMemPPNF
+Compiling module xil_defaultlib.IFID
+Compiling module xil_defaultlib.instrParse
+Compiling module xil_defaultlib.immGen
+Compiling module xil_defaultlib.controlUnit
+Compiling module xil_defaultlib.regFilePPNF
+Compiling module xil_defaultlib.branchUnit
+Compiling module xil_defaultlib.IDEX
+Compiling module xil_defaultlib.aluControl
+Compiling module xil_defaultlib.alu64
+Compiling module xil_defaultlib.EXMEM
+Compiling module xil_defaultlib.dataMem
+Compiling module xil_defaultlib.MEMWB
+Compiling module xil_defaultlib.PPNF
+Compiling module xil_defaultlib.tbPPNF
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tbPPNF_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tbPPNF_behav -key {Behavioral:sim_1:Functional:tbPPNF} -tclbatch {tbPPNF.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tbPPNF.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tbPPNF_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1027.387 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PPNF
+INFO: [VRFC 10-2458] undeclared symbol shifted_data, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:61]
+INFO: [VRFC 10-2458] undeclared symbol addrOut, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+INFO: [VRFC 10-2458] undeclared symbol dm1, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+INFO: [VRFC 10-2458] undeclared symbol dm2, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+INFO: [VRFC 10-2458] undeclared symbol dm3, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+INFO: [VRFC 10-2458] undeclared symbol dm4, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+INFO: [VRFC 10-2458] undeclared symbol dm5, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/addr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/alu64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/aluControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aluControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/branchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/controlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/dataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrMemPPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrParse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrParse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/mux_21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEMWB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/programCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module programCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/regFilePPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFilePPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbPPNF
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xelab -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'Adder_out' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:70]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'n0' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:78]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'b' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.programCounter
+Compiling module xil_defaultlib.mux_21
+Compiling module xil_defaultlib.addr
+Compiling module xil_defaultlib.instrMemPPNF
+Compiling module xil_defaultlib.IFID
+Compiling module xil_defaultlib.instrParse
+Compiling module xil_defaultlib.immGen
+Compiling module xil_defaultlib.controlUnit
+Compiling module xil_defaultlib.regFilePPNF
+Compiling module xil_defaultlib.branchUnit
+Compiling module xil_defaultlib.IDEX
+Compiling module xil_defaultlib.aluControl
+Compiling module xil_defaultlib.alu64
+Compiling module xil_defaultlib.EXMEM
+Compiling module xil_defaultlib.dataMem
+Compiling module xil_defaultlib.MEMWB
+Compiling module xil_defaultlib.PPNF
+Compiling module xil_defaultlib.tbPPNF
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tbPPNF_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tbPPNF_behav -key {Behavioral:sim_1:Functional:tbPPNF} -tclbatch {tbPPNF.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tbPPNF.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tbPPNF_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1027.387 ; gain = 0.000
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PPNF
+INFO: [VRFC 10-2458] undeclared symbol shifted_data, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+INFO: [VRFC 10-2458] undeclared symbol addrOut, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:63]
+INFO: [VRFC 10-2458] undeclared symbol dm1, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:79]
+INFO: [VRFC 10-2458] undeclared symbol dm2, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:79]
+INFO: [VRFC 10-2458] undeclared symbol dm3, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:79]
+INFO: [VRFC 10-2458] undeclared symbol dm4, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:79]
+INFO: [VRFC 10-2458] undeclared symbol dm5, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:79]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/addr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/alu64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/aluControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aluControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/branchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/controlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/dataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrMemPPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrParse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrParse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/mux_21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEMWB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/programCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module programCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/regFilePPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFilePPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbPPNF
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xelab -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'Adder_out' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:71]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'num1' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:79]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'b' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:63]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.programCounter
+Compiling module xil_defaultlib.mux_21
+Compiling module xil_defaultlib.addr
+Compiling module xil_defaultlib.instrMemPPNF
+Compiling module xil_defaultlib.IFID
+Compiling module xil_defaultlib.instrParse
+Compiling module xil_defaultlib.immGen
+Compiling module xil_defaultlib.controlUnit
+Compiling module xil_defaultlib.regFilePPNF
+Compiling module xil_defaultlib.branchUnit
+Compiling module xil_defaultlib.IDEX
+Compiling module xil_defaultlib.aluControl
+Compiling module xil_defaultlib.alu64
+Compiling module xil_defaultlib.EXMEM
+Compiling module xil_defaultlib.dataMem
+Compiling module xil_defaultlib.MEMWB
+Compiling module xil_defaultlib.PPNF
+Compiling module xil_defaultlib.tbPPNF
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tbPPNF_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tbPPNF_behav -key {Behavioral:sim_1:Functional:tbPPNF} -tclbatch {tbPPNF.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tbPPNF.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tbPPNF_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1027.387 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PPNF
+INFO: [VRFC 10-2458] undeclared symbol shifted_data, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+INFO: [VRFC 10-2458] undeclared symbol addrOut, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:63]
+INFO: [VRFC 10-2458] undeclared symbol num1, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:79]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/addr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/alu64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/aluControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aluControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/branchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/controlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/dataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrMemPPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrParse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrParse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/mux_21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEMWB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/programCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module programCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/regFilePPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFilePPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbPPNF
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xelab -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'Adder_out' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:71]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'num1' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:79]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'b' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:63]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.programCounter
+Compiling module xil_defaultlib.mux_21
+Compiling module xil_defaultlib.addr
+Compiling module xil_defaultlib.instrMemPPNF
+Compiling module xil_defaultlib.IFID
+Compiling module xil_defaultlib.instrParse
+Compiling module xil_defaultlib.immGen
+Compiling module xil_defaultlib.controlUnit
+Compiling module xil_defaultlib.regFilePPNF
+Compiling module xil_defaultlib.branchUnit
+Compiling module xil_defaultlib.IDEX
+Compiling module xil_defaultlib.aluControl
+Compiling module xil_defaultlib.alu64
+Compiling module xil_defaultlib.EXMEM
+Compiling module xil_defaultlib.dataMem
+Compiling module xil_defaultlib.MEMWB
+Compiling module xil_defaultlib.PPNF
+Compiling module xil_defaultlib.tbPPNF
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tbPPNF_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tbPPNF_behav -key {Behavioral:sim_1:Functional:tbPPNF} -tclbatch {tbPPNF.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tbPPNF.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tbPPNF_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1027.387 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PPNF
+INFO: [VRFC 10-2458] undeclared symbol shifted_data, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+INFO: [VRFC 10-2458] undeclared symbol addrOut, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:63]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/addr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/alu64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/aluControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aluControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/branchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/controlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/dataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrMemPPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrParse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrParse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/mux_21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEMWB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/programCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module programCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/regFilePPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFilePPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbPPNF
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xelab -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'Adder_out' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:71]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'b' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:63]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.programCounter
+Compiling module xil_defaultlib.mux_21
+Compiling module xil_defaultlib.addr
+Compiling module xil_defaultlib.instrMemPPNF
+Compiling module xil_defaultlib.IFID
+Compiling module xil_defaultlib.instrParse
+Compiling module xil_defaultlib.immGen
+Compiling module xil_defaultlib.controlUnit
+Compiling module xil_defaultlib.regFilePPNF
+Compiling module xil_defaultlib.branchUnit
+Compiling module xil_defaultlib.IDEX
+Compiling module xil_defaultlib.aluControl
+Compiling module xil_defaultlib.alu64
+Compiling module xil_defaultlib.EXMEM
+Compiling module xil_defaultlib.dataMem
+Compiling module xil_defaultlib.MEMWB
+Compiling module xil_defaultlib.PPNF
+Compiling module xil_defaultlib.tbPPNF
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tbPPNF_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tbPPNF_behav -key {Behavioral:sim_1:Functional:tbPPNF} -tclbatch {tbPPNF.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tbPPNF.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tbPPNF_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1027.387 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PPNF
+INFO: [VRFC 10-2458] undeclared symbol shifted_data, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+INFO: [VRFC 10-2458] undeclared symbol addrOut, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:63]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/addr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/alu64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/aluControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aluControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/branchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/controlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/dataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrMemPPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrParse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrParse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/mux_21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+ERROR: [VRFC 10-2989] 'RS1' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:56]
+ERROR: [VRFC 10-2989] 'RS2' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:57]
+ERROR: [VRFC 10-2989] 'RD' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:58]
+ERROR: [VRFC 10-2865] module 'IDEX' ignored due to previous errors [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:3]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PPNF
+INFO: [VRFC 10-2458] undeclared symbol shifted_data, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+INFO: [VRFC 10-2458] undeclared symbol addrOut, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:63]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/addr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/alu64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/aluControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aluControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/branchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/controlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/dataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrMemPPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrParse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrParse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/mux_21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+ERROR: [VRFC 10-2989] 'RS1' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:56]
+ERROR: [VRFC 10-2989] 'RS2' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:57]
+ERROR: [VRFC 10-2989] 'RD' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:58]
+ERROR: [VRFC 10-2865] module 'IDEX' ignored due to previous errors [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:3]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PPNF
+INFO: [VRFC 10-2458] undeclared symbol shifted_data, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/addr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/alu64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/aluControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aluControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/branchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/controlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/dataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrMemPPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrParse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrParse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/mux_21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+ERROR: [VRFC 10-2989] 'RS1' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:56]
+ERROR: [VRFC 10-2989] 'RS2' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:57]
+ERROR: [VRFC 10-2989] 'RD' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:58]
+ERROR: [VRFC 10-2865] module 'IDEX' ignored due to previous errors [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:3]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PPNF
+INFO: [VRFC 10-2458] undeclared symbol shifted_data, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/addr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/alu64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/aluControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aluControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/branchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/controlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/dataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrMemPPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrParse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrParse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/mux_21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+ERROR: [VRFC 10-2989] 'RS1' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:56]
+ERROR: [VRFC 10-2989] 'RS2' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:57]
+ERROR: [VRFC 10-2989] 'RD' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:58]
+ERROR: [VRFC 10-2865] module 'IDEX' ignored due to previous errors [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:3]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+reset_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-2266] Removing simulation data...
+INFO: [Vivado 12-2267] Reset complete
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PPNF
+INFO: [VRFC 10-2458] undeclared symbol shifted_data, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/addr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/alu64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/aluControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aluControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/branchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/controlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/dataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrMemPPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrParse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrParse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/mux_21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+ERROR: [VRFC 10-2989] 'RS1' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:56]
+ERROR: [VRFC 10-2989] 'RS2' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:57]
+ERROR: [VRFC 10-2989] 'RD' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:58]
+ERROR: [VRFC 10-2865] module 'IDEX' ignored due to previous errors [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:3]
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'compile' step aborted
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PPNF
+INFO: [VRFC 10-2458] undeclared symbol shifted_data, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/addr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/alu64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/aluControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aluControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/branchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/controlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/dataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrMemPPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrParse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrParse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/mux_21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+ERROR: [VRFC 10-2989] 'RS1' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:56]
+ERROR: [VRFC 10-2989] 'RS2' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:57]
+ERROR: [VRFC 10-2989] 'RD' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:58]
+ERROR: [VRFC 10-2865] module 'IDEX' ignored due to previous errors [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:3]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PPNF
+INFO: [VRFC 10-2458] undeclared symbol shifted_data, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/addr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/alu64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/aluControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aluControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/branchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/controlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/dataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrMemPPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrParse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrParse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/mux_21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+ERROR: [VRFC 10-2989] 'RS1' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:56]
+ERROR: [VRFC 10-2989] 'RS2' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:57]
+ERROR: [VRFC 10-2989] 'RD' is not declared [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:58]
+ERROR: [VRFC 10-2865] module 'IDEX' ignored due to previous errors [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v:3]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PPNF
+INFO: [VRFC 10-2458] undeclared symbol shifted_data, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/addr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/alu64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/aluControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aluControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/branchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/controlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/dataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrMemPPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrParse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrParse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/mux_21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEMWB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/programCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module programCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/regFilePPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFilePPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbPPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xelab -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'Instruction' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:44]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'ALUSrc' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:55]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'Funct' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:56]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'IDEX_ALUSrc' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:57]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'IDEX_Funct' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:58]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEM_Zero' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:74]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 5 for port 'EXMEM_rd' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:83]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 5 for port 'MEMWB_rd' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:85]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'b' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:63]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.programCounter
+Compiling module xil_defaultlib.mux_21
+Compiling module xil_defaultlib.addr
+Compiling module xil_defaultlib.instrMemPPNF
+Compiling module xil_defaultlib.IFID
+Compiling module xil_defaultlib.instrParse
+Compiling module xil_defaultlib.immGen
+Compiling module xil_defaultlib.controlUnit
+Compiling module xil_defaultlib.regFilePPNF
+Compiling module xil_defaultlib.branchUnit
+Compiling module xil_defaultlib.IDEX
+Compiling module xil_defaultlib.aluControl
+Compiling module xil_defaultlib.alu64
+Compiling module xil_defaultlib.EXMEM
+Compiling module xil_defaultlib.dataMem
+Compiling module xil_defaultlib.MEMWB
+Compiling module xil_defaultlib.PPNF
+Compiling module xil_defaultlib.tbPPNF
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tbPPNF_behav
+
+****** Webtalk v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim/xsim.dir/tbPPNF_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Apr 21 15:30:51 2025...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tbPPNF_behav -key {Behavioral:sim_1:Functional:tbPPNF} -tclbatch {tbPPNF.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tbPPNF.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tbPPNF_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1027.387 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PPNF
+INFO: [VRFC 10-2458] undeclared symbol shifted_data, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/addr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/alu64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/aluControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aluControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/branchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/controlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/dataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrMemPPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrParse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrParse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/mux_21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEMWB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/programCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module programCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/regFilePPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFilePPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbPPNF
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xelab -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'Instruction' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:44]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'ALUSrc' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:55]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'Funct' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:56]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'IDEX_ALUSrc' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:57]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'IDEX_Funct' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:58]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEM_Zero' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:74]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 5 for port 'EXMEM_rd' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:83]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 5 for port 'MEMWB_rd' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:85]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'b' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:63]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.programCounter
+Compiling module xil_defaultlib.mux_21
+Compiling module xil_defaultlib.addr
+Compiling module xil_defaultlib.instrMemPPNF
+Compiling module xil_defaultlib.IFID
+Compiling module xil_defaultlib.instrParse
+Compiling module xil_defaultlib.immGen
+Compiling module xil_defaultlib.controlUnit
+Compiling module xil_defaultlib.regFilePPNF
+Compiling module xil_defaultlib.branchUnit
+Compiling module xil_defaultlib.IDEX
+Compiling module xil_defaultlib.aluControl
+Compiling module xil_defaultlib.alu64
+Compiling module xil_defaultlib.EXMEM
+Compiling module xil_defaultlib.dataMem
+Compiling module xil_defaultlib.MEMWB
+Compiling module xil_defaultlib.PPNF
+Compiling module xil_defaultlib.tbPPNF
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tbPPNF_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tbPPNF_behav -key {Behavioral:sim_1:Functional:tbPPNF} -tclbatch {tbPPNF.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tbPPNF.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tbPPNF_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1027.387 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PPNF
+INFO: [VRFC 10-2458] undeclared symbol shifted_data, assumed default net type wire [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:62]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/addr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/alu64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/aluControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aluControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/branchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/controlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/dataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrMemPPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrParse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrParse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/mux_21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEMWB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/programCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module programCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/regFilePPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFilePPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbPPNF
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xelab -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'Instruction' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:44]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'ALUSrc' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:55]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'Funct' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:56]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'IDEX_ALUSrc' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:57]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'IDEX_Funct' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:58]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEM_Zero' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:74]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 5 for port 'EXMEM_rd' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:83]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 5 for port 'MEMWB_rd' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:85]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 64 for port 'b' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:63]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.programCounter
+Compiling module xil_defaultlib.mux_21
+Compiling module xil_defaultlib.addr
+Compiling module xil_defaultlib.instrMemPPNF
+Compiling module xil_defaultlib.IFID
+Compiling module xil_defaultlib.instrParse
+Compiling module xil_defaultlib.immGen
+Compiling module xil_defaultlib.controlUnit
+Compiling module xil_defaultlib.regFilePPNF
+Compiling module xil_defaultlib.branchUnit
+Compiling module xil_defaultlib.IDEX
+Compiling module xil_defaultlib.aluControl
+Compiling module xil_defaultlib.alu64
+Compiling module xil_defaultlib.EXMEM
+Compiling module xil_defaultlib.dataMem
+Compiling module xil_defaultlib.MEMWB
+Compiling module xil_defaultlib.PPNF
+Compiling module xil_defaultlib.tbPPNF
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tbPPNF_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tbPPNF_behav -key {Behavioral:sim_1:Functional:tbPPNF} -tclbatch {tbPPNF.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tbPPNF.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tbPPNF_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1027.387 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/addr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/alu64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/aluControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aluControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/branchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/controlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/dataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrMemPPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrParse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrParse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/mux_21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEMWB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/programCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module programCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/regFilePPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFilePPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbPPNF
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xelab -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'Instruction' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:44]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'ALUSrc' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:55]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'Funct' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:56]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'IDEX_ALUSrc' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:57]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 4 for port 'IDEX_Funct' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:58]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 1 for port 'EXMEM_Zero' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:74]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 5 for port 'EXMEM_rd' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:83]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 5 for port 'MEMWB_rd' [C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v:85]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.programCounter
+Compiling module xil_defaultlib.mux_21
+Compiling module xil_defaultlib.addr
+Compiling module xil_defaultlib.instrMemPPNF
+Compiling module xil_defaultlib.IFID
+Compiling module xil_defaultlib.instrParse
+Compiling module xil_defaultlib.immGen
+Compiling module xil_defaultlib.controlUnit
+Compiling module xil_defaultlib.regFilePPNF
+Compiling module xil_defaultlib.branchUnit
+Compiling module xil_defaultlib.IDEX
+Compiling module xil_defaultlib.aluControl
+Compiling module xil_defaultlib.alu64
+Compiling module xil_defaultlib.EXMEM
+Compiling module xil_defaultlib.dataMem
+Compiling module xil_defaultlib.MEMWB
+Compiling module xil_defaultlib.PPNF
+Compiling module xil_defaultlib.tbPPNF
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tbPPNF_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tbPPNF_behav -key {Behavioral:sim_1:Functional:tbPPNF} -tclbatch {tbPPNF.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tbPPNF.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tbPPNF_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1027.387 ; gain = 0.000
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ahmed\Documents\project_5\project_5.srcs\sources_1\new\addr.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ahmed\Documents\project_5\project_5.srcs\sources_1\new\aluControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ahmed\Documents\project_5\project_5.srcs\sources_1\new\immGen.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ahmed\Documents\project_5\project_5.srcs\sources_1\new\regFilePPNF.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ahmed\Documents\project_5\project_5.srcs\sources_1\new\controlUnit.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ahmed\Documents\project_5\project_5.srcs\sources_1\new\instrMemPPNF.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ahmed\Documents\project_5\project_5.srcs\sources_1\new\programCounter.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ahmed\Documents\project_5\project_5.srcs\sources_1\new\instrMem.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ahmed\Documents\project_5\project_5.srcs\sim_1\new\tbPPNF.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ahmed\Documents\project_5\project_5.srcs\sources_1\new\branchUnit.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ahmed\Documents\project_5\project_5.srcs\sources_1\new\instrParse.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ahmed\Documents\project_5\project_5.srcs\sources_1\new\PPNF.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ahmed\Documents\project_5\project_5.srcs\sources_1\new\pipReg4.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ahmed\Documents\project_5\project_5.srcs\sources_1\new\mux_21.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ahmed\Documents\project_5\project_5.srcs\sources_1\new\pipReg3.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ahmed\Documents\project_5\project_5.srcs\sources_1\new\pipReg2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ahmed\Documents\project_5\project_5.srcs\sources_1\new\dataMem.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ahmed\Documents\project_5\project_5.srcs\sources_1\new\pipReg1.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\ahmed\Documents\project_5\project_5.srcs\sources_1\new\alu64.v:]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbPPNF' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbPPNF_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/PPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/addr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/alu64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/aluControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aluControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/branchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/controlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/dataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrMemPPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrParse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instrParse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/mux_21.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_21
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEMWB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/programCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module programCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/regFilePPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFilePPNF
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbPPNF
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+"xelab -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto df33b2d6ad0340e68978812557eba9dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbPPNF_behav xil_defaultlib.tbPPNF xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.programCounter
+Compiling module xil_defaultlib.mux_21
+Compiling module xil_defaultlib.addr
+Compiling module xil_defaultlib.instrMemPPNF
+Compiling module xil_defaultlib.IFID
+Compiling module xil_defaultlib.instrParse
+Compiling module xil_defaultlib.immGen
+Compiling module xil_defaultlib.controlUnit
+Compiling module xil_defaultlib.regFilePPNF
+Compiling module xil_defaultlib.branchUnit
+Compiling module xil_defaultlib.IDEX
+Compiling module xil_defaultlib.aluControl
+Compiling module xil_defaultlib.alu64
+Compiling module xil_defaultlib.EXMEM
+Compiling module xil_defaultlib.dataMem
+Compiling module xil_defaultlib.MEMWB
+Compiling module xil_defaultlib.PPNF
+Compiling module xil_defaultlib.tbPPNF
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tbPPNF_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ahmed/Documents/project_5/project_5.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tbPPNF_behav -key {Behavioral:sim_1:Functional:tbPPNF} -tclbatch {tbPPNF.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tbPPNF.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tbPPNF_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1138.078 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 21 16:05:33 2025...

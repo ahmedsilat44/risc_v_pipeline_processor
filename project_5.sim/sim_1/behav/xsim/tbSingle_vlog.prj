@@ -1,0 +1,22 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_5.srcs/sources_1/new/SCP.v" \
+"../../../../project_5.srcs/sources_1/new/addr.v" \
+"../../../../project_5.srcs/sources_1/new/alu64.v" \
+"../../../../project_5.srcs/sources_1/new/aluControl.v" \
+"../../../../project_5.srcs/sources_1/new/branchUnit.v" \
+"../../../../project_5.srcs/sources_1/new/controlUnit.v" \
+"../../../../project_5.srcs/sources_1/new/dataMem.v" \
+"../../../../project_5.srcs/sources_1/new/immGen.v" \
+"../../../../project_5.srcs/sources_1/new/instrMem.v" \
+"../../../../project_5.srcs/sources_1/new/instrParse.v" \
+"../../../../project_5.srcs/sources_1/new/mux_21.v" \
+"../../../../project_5.srcs/sources_1/new/programCounter.v" \
+"../../../../project_5.srcs/sources_1/new/regFile.v" \
+"../../../../project_5.srcs/sim_1/new/risc5tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

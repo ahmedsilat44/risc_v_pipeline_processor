@@ -1,0 +1,97 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Apr 21 14:06:05 2025
+# Process ID: 16996
+# Current directory: C:/Users/ahmed/Documents/project_5
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1224 C:\Users\ahmed\Documents\project_5\project_5.xpr
+# Log file: C:/Users/ahmed/Documents/project_5/vivado.log
+# Journal file: C:/Users/ahmed/Documents/project_5\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ahmed/Documents/project_5/project_5.xpr
+update_compile_order -fileset sources_1
+close [ open C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immMemPPNF.v w ]
+add_files C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immMemPPNF.v
+update_compile_order -fileset sources_1
+update_files -from_files C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/instrMemPPNF.v -to_files C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/immMemPPNF.v -filesets [get_filesets *]
+close [ open C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg3.v w ]
+add_files C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg3.v
+close [ open C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v w ]
+add_files C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg2.v
+close [ open C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v w ]
+add_files C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg1.v
+close [ open C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg4.v w ]
+add_files C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/pipReg4.v
+update_compile_order -fileset sources_1
+close [ open C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/regFilePPNF.v w ]
+add_files C:/Users/ahmed/Documents/project_5/project_5.srcs/sources_1/new/regFilePPNF.v
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v w ]
+add_files -fileset sim_1 C:/Users/ahmed/Documents/project_5/project_5.srcs/sim_1/new/tbPPNF.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tbPPNF [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top PPNF [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+source tbPPNF.tcl
+relaunch_sim
+close_sim
+launch_simulation
+source tbPPNF.tcl
+close_sim
+launch_simulation
+source tbPPNF.tcl
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source tbPPNF.tcl
+close_sim
+launch_simulation
+source tbPPNF.tcl
+close_sim
+launch_simulation
+source tbPPNF.tcl
+close_sim
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source tbPPNF.tcl
+close_sim
+launch_simulation
+source tbPPNF.tcl
+close_sim
+launch_simulation
+source tbPPNF.tcl
+close_sim
+launch_simulation
+source tbPPNF.tcl
+close_sim
+launch_simulation
+source tbPPNF.tcl
+close_sim
